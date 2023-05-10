@@ -1,0 +1,54 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-inner {
+    display: flex;
+    position: relative;
+    width: 300%;
+    height: 100%;
+    animation: sliding 12s infinite;
+}
+
+.carousel-item {
+    flex: 1 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.active {
+    animation: none;
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0%);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
